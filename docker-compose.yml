@@ -3,10 +3,10 @@ services:
  dbpost:
   image: postgres:latest
   environment:
-   POSTGRES_DB: db_joel_compose
+   POSTGRES_DB: db_wholesale
    POSTGRES_USER: joel
    POSTGRES_PASSWORD: 1337
   volumes:
-   - ./init_scripts/init.sql:/docker-entrypoint-initdb.d/init.sql
+   - "./init_scripts/init.sql:/docker-entrypoint-initdb.d/init.sql"
   ports:
    - 5432:5432
